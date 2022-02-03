@@ -30,3 +30,20 @@ a {
   color: #212121;
   font-weight: 500;
 }
+.gallery {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+.gallery .item {
+  width: 400px;
+  height: 230px;
+  margin-left: 20px;
+}
+.gallery .item:first-child {
+  margin-left: 0px;
+}
+.gallery .img {
+  width: 400px;
+  height: 230px;
+}

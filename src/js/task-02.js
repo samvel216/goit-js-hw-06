@@ -6,10 +6,16 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+let ingridientArrayEl = [];
 const ingridientsListEl = document.querySelector('#ingredients');
-ingredients.forEach(element => {
+const ingridientArrayTransform = (ingredientsArg) => {
+  ingredientsArg.map(element => {
   let ingridientEl = document.createElement('li');
   ingridientEl.classList.add('item');
-  ingridientEl.textContent = element;
-  ingridientsListEl.append(ingridientEl);
-});
+    ingridientEl.textContent = element;
+    ingridientArrayEl.push(ingridientEl);
+  })
+  return ingridientArrayEl;
+}
+const ingridientArrayTransformBox = ingridientArrayTransform(ingredients)
+ingridientsListEl.append(...ingridientArrayTransformBox);

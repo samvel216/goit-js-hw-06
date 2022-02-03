@@ -15,18 +15,5 @@ const images = [
 const galleryEl = document.querySelector('.gallery');
 const innerGallery = images.map((element) => `<li class="item"><img class="img" src="${element.url}" alt="${element.alt}"></li>`).join("");
 galleryEl.insertAdjacentHTML("beforeend", innerGallery);
-const itemEl = document.querySelectorAll('.item');
-const imgEl = document.querySelectorAll('.img');
-galleryEl.style.display = "flex";
-galleryEl.style.listStyle = "none";
-galleryEl.style.padding = "0px";
-imgEl.forEach(element => {
-  element.style.width = "400px";
-  element.style.height = "230px";
-})
-itemEl.forEach(element => {
-  element.style.width = "400px"; 
-  element.style.height = "230px"; 
-  element.style.marginLeft = "20px";
-});
-console.log(itemEl);
+
+

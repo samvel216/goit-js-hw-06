@@ -1,11 +1,6 @@
 const inputEl = document.querySelector('#validation-input');
 const dataLength = inputEl.getAttribute('data-length');
-let inputLength;
-let numberDataLength = 0;
-for (let i = 0; i < dataLength; i += 1) {
-    numberDataLength += 1;
-}
-console.log(numberDataLength);
+const numberDataLength = Number(dataLength);
 const inputFocus = (event) => {
     event.preventDefault();
 }

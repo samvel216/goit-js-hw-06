@@ -3,7 +3,8 @@ const sendEmailPass = (event) => {
     event.preventDefault();
     const {email, password } = event.currentTarget;
     if (email.value === "" || password.value === "") {
-     return   alert("Внимание! Это предупреждение! Не все поля заполнены!")
+        alert("Внимание! Это предупреждение! Не все поля заполнены!");
+        event.currentTarget.reset();
     }
     const object = {
         email: `${email.value}`,

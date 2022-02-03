@@ -6,7 +6,8 @@ const spanColorEl = document.querySelector('.color');
 const bodyEl = document.querySelector('body');
 const chacheColorBody = (event) => {
   event.preventDefault();
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  spanColorEl.textContent = bodyEl.style.backgroundColor;
+  const randomColor = getRandomHexColor();
+  bodyEl.style.backgroundColor = randomColor;
+  spanColorEl.textContent = randomColor;
 }
 chacheColorEl.addEventListener('click', chacheColorBody);

@@ -42,10 +42,7 @@ const createColection = (event) => {
 dataCreateEl.addEventListener('click', createColection);
 const destroyBoxes = (event) => {
   event.preventDefault();
-  const allDiv = document.querySelectorAll('.new-div');
-  for (const element of allDiv) {
-     element.remove();
-  }
+  boxesEl.innerHTML = " ";
 }
 dataDestroyEl.addEventListener('click', destroyBoxes);
 
